@@ -1,3 +1,18 @@
 <h1>
-  {{title}}
+    {{title}}
 </h1>
+<ul class="itemList">
+    <li *ngFor="let item of itemList">
+        <p>
+            <label [class.selected]="cb1.checked">
+                <input #cb1 type="checkbox" value="one" (change)="logCheckbox(cb1)"> {{item.name}}
+                <button (click)="removeItem(item.name)">Delete</button>
+            </label>
+        </p>
+    </li>
+
+</ul>
+<hr>>
+<input #textbox type="text" required>
+<button (click)="addItem(textbox.value); textbox.value=''">Add to list</button>
+<button (click)="textbox.value=''">Clear</button>

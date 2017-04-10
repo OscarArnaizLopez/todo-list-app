@@ -1,0 +1,9 @@
+.selected {
+    text-decoration: line-through;
+}
+
+.separator {
+    height: 1;
+    width: 500;
+    background-color: #000
+}
